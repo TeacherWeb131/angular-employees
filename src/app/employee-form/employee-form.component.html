@@ -1,0 +1,10 @@
+<h2 *ngIf="!employee">Création d'un employé</h2>
+<h2 *ngIf="employee">Modification d'un employé</h2>
+
+<form [formGroup]="form" (ngSubmit)="handleSubmit()">
+  <input type="text" placeholder="Prénom" formControlName="firstName" />
+  <input type="text" placeholder="Nom de famille" formControlName="lastName" />
+  <input type="email" placeholder="Email" formControlName="email" />
+
+  <button class="btn btn-primary btn-sm" type="submit">Enregistrer</button>
+</form>
